@@ -1,2 +1,2 @@
 def hi():
-  return hi
+  return "raw"
