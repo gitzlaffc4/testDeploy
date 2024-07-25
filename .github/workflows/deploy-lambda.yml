@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - '/reports/**.py' # Change to the file extension of the language that you are using.
+      - 'reports/**.py' # Change to the file extension of the language that you are using.
 
 jobs:
   deploy:
