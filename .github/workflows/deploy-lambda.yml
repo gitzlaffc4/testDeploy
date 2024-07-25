@@ -22,7 +22,7 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-west-2 # Modify this to your desired AWS region
+        aws-region: us-east-1 # Modify this to your desired AWS region
 
     - name: Print changed files # To properly debug what is being deployed (It can be removed).
       run: |
@@ -32,7 +32,7 @@ jobs:
       run: |
         # Constants
         S3_BUCKET=cdgtestdeploy
-        S3_KEY=tes.zip
+        S3_KEY=test.zip
         LAMBDA_FUNCTION_NAME= testdeploy
         # Download the existing zip from S3
         aws s3 cp s3://$S3_BUCKET/$S3_KEY existing_lambda.zip
